@@ -1,6 +1,6 @@
 # Файтерский конфиг от Миная
 
-Скачать актуальную версия тут: [СКАЧАТЬ](https://github.com/yuraigle/soldaten/raw/main/soldaten.zip)
+Скачать актуальную версия тут: [СКАЧАТЬ](https://github.com/yuraigle/soldaten/archive/refs/heads/main.zip)
 
 Если вы здесь случайно и не знаете, что это и для чего, можете познакомиться с игрой: [МПМ "Былины"](http://www.bylins.su)
 
