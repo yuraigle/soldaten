@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.encoding": "windows1251",
+		"editor.tabSize": 2,
+		"editor.rulers": [
+			80, 100
+		],
+
+		"[markdown]": {
+			"files.encoding": "utf8"
+		}
+	},
+}
