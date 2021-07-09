@@ -39,6 +39,7 @@ sub cyr_upper {
 
 sub trim {
   my ($s) = @_;
+  $s = '' unless $s;
   $s =~ s/^\s+//sxm;
   $s =~ s/\s+$//sxm;
   return $s;
