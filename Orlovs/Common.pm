@@ -86,6 +86,8 @@ sub act_bot {
     Common::set_mode_shield();
     Target1::set_target1($args);
     Target1::say_target1();
+  } elsif ($p eq 'конфиг') {
+    U::sendline('гг версия ' . $App::VERSION);
   } elsif ($p eq 'вск') {
     Common::mount1();
   } elsif ($p =~ m/^(к|ко|кол|колд|К)$/sxm && $prof =~ m/бога|охот|кузн/sxm) {
