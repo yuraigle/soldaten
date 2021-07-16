@@ -7,16 +7,6 @@ our $VERSION = '1.01';
 our $CONF = Config::Tiny->read($Conf::INI)
   or Carp::croak(qq/Error reading $Conf::INI/);
 
-require Orlovs::U;
-require Orlovs::Connection;
-require Orlovs::Layout;
-require Orlovs::Reactions;
-require Orlovs::Autopom;
-require Orlovs::Target1;
-require Orlovs::Common;
-require Orlovs::Harvester;
-require My;
-
 our @FRIENDS = ();
 our @PLAYERS = ();
 our @CHARMIS = ();
@@ -46,6 +36,17 @@ for my $line (@lines) {
     push @FRIENDS, $m;
   }
 }
+
+require Orlovs::U;
+require Orlovs::Connection;
+require Orlovs::Layout;
+require Orlovs::Reactions;
+require Orlovs::Autopom;
+require Orlovs::Autoresc;
+require Orlovs::Target1;
+require Orlovs::Common;
+require Orlovs::Harvester;
+require My;
 
 U::showme("Загружены настройки для персонажа \3L" . $CONF->{CONNECT}->{name});
 

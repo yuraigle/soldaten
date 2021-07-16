@@ -20,7 +20,7 @@ my @attack_types = (
 
 @attack_types = map { $_ . '[אמט]?' } @attack_types;
 
-my $rx_battle1 = '^(.*?)\s' .
+our $RX_BATTLE1 = '^(.*?)\s' .
   '(' . join( q/|/, @attack_weight ) . ')?\s?' .
   '(' . join( q/|/, @attack_types ) . ')\s' .
   '(.*)\.(\s\(\*+\))?$';
@@ -100,7 +100,7 @@ P::trig {
   } elsif (any { $_->{VIN} eq $t2 } @App::FRIENDS) {
     push @all_ime, $t1 if !U::same($t1, 'גû');
   }
-} $rx_battle1, 'nf1000:AUTOPOM';
+} $RX_BATTLE1, 'nf1000:AUTOPOM';
 
 foreach (@rx_ime_rod) {
   P::trig {
