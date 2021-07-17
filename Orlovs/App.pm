@@ -3,7 +3,7 @@ package App;
 use Win32::OLE;
 use Config::Tiny;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 our $CONF = Config::Tiny->read($Conf::INI)
   or Carp::croak(qq/Error reading $Conf::INI/);
 
