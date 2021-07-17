@@ -41,6 +41,7 @@ my @rx_vin = (
 
 P::trig {
   my ($t1, $t2) = ($1, $4);
+  return if Target1::have_pk_target();
   my $i = first_index {$_->{VIN} eq $t2} @f2resc;
   U::sendline('спасти .' . $f2resc[$i]->{IME}) if $i >= 0;
 } $Autopom::RX_BATTLE1, '-nf1000:AUTORESC';
@@ -48,6 +49,7 @@ P::trig {
 foreach (@rx_ime) {
   P::trig {
     my $t1 = $1;
+    return if Target1::have_pk_target();
     my $i = first_index {$_->{IME} eq $t1} @f2resc;
     U::sendline('спасти .' . $f2resc[$i]->{IME}) if $i >= 0;
   } $_, '-nf100:AUTORESC';
@@ -56,6 +58,7 @@ foreach (@rx_ime) {
 foreach (@rx_rod) {
   P::trig {
     my $t1 = $1;
+    return if Target1::have_pk_target();
     my $i = first_index {$_->{ROD} eq $t1} @f2resc;
     U::sendline('спасти .' . $f2resc[$i]->{IME}) if $i >= 0;
   } $_, '-nf100:AUTORESC';
@@ -64,6 +67,7 @@ foreach (@rx_rod) {
 foreach (@rx_vin) {
   P::trig {
     my $t1 = $1;
+    return if Target1::have_pk_target();
     my $i = first_index {$_->{VIN} eq $t1} @f2resc;
     U::sendline('спасти .' . $f2resc[$i]->{IME}) if $i >= 0;
   } $_, '-nf100:AUTORESC';
