@@ -117,7 +117,7 @@ P::trig {
     U::sendline('соск;отпу');
     P::enable('AUTORESC');
   } else {
-    U::sendline('гг некого тут рескать :(');
+    U::sendline('гг некого тут рескать');
   }
 } '^$', '-nf1000:AUTORESC_UPD1';
 
