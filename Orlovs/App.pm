@@ -48,6 +48,7 @@ require Orlovs::Common;
 require Orlovs::Harvester;
 require My;
 
+U::showme("Версия $VERSION");
 U::showme("Загружены настройки для персонажа \3L" . $CONF->{CONNECT}->{name});
 
 P::hook {
